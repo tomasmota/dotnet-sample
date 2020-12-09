@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,9 +31,7 @@ namespace dotnet_sample
             }
 
             app.UseRouting();
-
             app.UseSerilogRequestLogging();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
