@@ -16,5 +16,7 @@ WORKDIR /app
 COPY --from=build /app .
 ENV ASPNETCORE_ENVIRONMENT=Development
 EXPOSE 5050
+
+ENV ConfigVar=DockerOverride
 ENV ASPNETCORE_URLS=http://+:5050
 ENTRYPOINT ["dotnet", "dotnet-sample.dll"]
